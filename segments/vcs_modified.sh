@@ -4,8 +4,7 @@
 # Source lib to get the function get_tmux_pwd
 source "${TMUX_POWERLINE_DIR_LIB}/tmux_adapter.sh"
 
-mod_symbol="﹢"
-
+mod_symbol="✒"
 run_segment() {
 	tmux_path=$(get_tmux_cwd)
 	cd "$tmux_path"
@@ -19,7 +18,7 @@ run_segment() {
 		stats="$hg_stats"
 	fi
 	if [[ -n "$stats" && $stats -gt 0 ]]; then
-		echo "${mod_symbol}${stats}"
+		echo "${mod_symbol} ${stats}"
 	fi
 }
 
